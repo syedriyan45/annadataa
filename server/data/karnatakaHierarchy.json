@@ -1,0 +1,231 @@
+{
+  "districts": [
+    {
+      "id": "kalaburagi",
+      "nameEn": "Kalaburagi (Gulbarga)",
+      "nameKn": "ಕಲಬುರಗಿ",
+      "taluks": [
+        {
+          "id": "kalaburagi_taluk",
+          "nameEn": "Kalaburagi",
+          "nameKn": "ಕಲಬುರಗಿ",
+          "hoblis": [
+            {
+              "id": "kasaba_kalaburagi",
+              "nameEn": "Kasaba",
+              "nameKn": "ಕಸಬಾ",
+              "villages": [
+                { "id": "v101", "nameEn": "Sannur", "nameKn": "ಸನ್ನೂರ" },
+                { "id": "v102", "nameEn": "Hagargi", "nameKn": "ಹಗರ್ಗಿ" },
+                { "id": "v103", "nameEn": "Kusnoor", "nameKn": "ಕುಸನೂರ" },
+                { "id": "v104", "nameEn": "Nandikur", "nameKn": "ನಂದಿಕೂರ" }
+              ]
+            },
+            {
+              "id": "farhatabad",
+              "nameEn": "Farhatabad",
+              "nameKn": "ಫರ್ಹತಾಬಾದ್",
+              "villages": [
+                { "id": "v105", "nameEn": "Farhatabad Village", "nameKn": "ಫರ್ಹತಾಬಾದ್ ಗ್ರಾಮ" },
+                { "id": "v106", "nameEn": "Kere Bhosga", "nameKn": "ಕೆರೆ ಭೋಸಗಾ" },
+                { "id": "v107", "nameEn": "Sirnoor", "nameKn": "ಸಿರನೂರ" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "aland",
+          "nameEn": "Aland",
+          "nameKn": "ಆಳಂದ",
+          "hoblis": [
+            {
+              "id": "aland_kasaba",
+              "nameEn": "Aland Kasaba",
+              "nameKn": "ಆಳಂದ ಕಸಬಾ",
+              "villages": [
+                { "id": "v108", "nameEn": "Narona", "nameKn": "ನರೋಣಾ" },
+                { "id": "v109", "nameEn": "Khajuri", "nameKn": "ಖಜೂರಿ" },
+                { "id": "v110", "nameEn": "Madan Hipparga", "nameKn": "ಮದನ ಹಿಪ್ಪರಗಾ" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sedam",
+          "nameEn": "Sedam",
+          "nameKn": "ಸೇಡಂ",
+          "hoblis": [
+            {
+              "id": "sedam_kasaba",
+              "nameEn": "Sedam Kasaba",
+              "nameKn": "ಸೇಡಂ ಕಸಬಾ",
+              "villages": [
+                { "id": "v111", "nameEn": "Mudhol", "nameKn": "ಮುಧೋಳ" },
+                { "id": "v112", "nameEn": "Ribbanpalli", "nameKn": "ರಿಬ್ಬನಪಲ್ಲಿ" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bengaluru_rural",
+      "nameEn": "Bengaluru Rural",
+      "nameKn": "ಬೆಂಗಳೂರು ಗ್ರಾಮಾಂತರ",
+      "taluks": [
+        {
+          "id": "devanahalli",
+          "nameEn": "Devanahalli",
+          "nameKn": "ದೇವನಹಳ್ಳಿ",
+          "hoblis": [
+            {
+              "id": "kasaba_devanahalli",
+              "nameEn": "Kasaba",
+              "nameKn": "ಕಸಬಾ",
+              "villages": [
+                { "id": "v201", "nameEn": "Bettakote", "nameKn": "ಬೆಟ್ಟಕೋಟೆ" },
+                { "id": "v202", "nameEn": "Budigere", "nameKn": "ಬೂದಿಗೆರೆ" },
+                { "id": "v203", "nameEn": "Arasinakunte", "nameKn": "ಅರಸಿನಕುಂಟೆ" }
+              ]
+            },
+            {
+              "id": "kundana",
+              "nameEn": "Kundana",
+              "nameKn": "ಕುಂದಾಣ",
+              "villages": [
+                { "id": "v204", "nameEn": "Heggadahalli", "nameKn": "ಹೆಗ್ಗಡಹಳ್ಳಿ" },
+                { "id": "v205", "nameEn": "Vishwanathapura", "nameKn": "ವಿಶ್ವನಾಥಪುರ" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "doddaballapura",
+          "nameEn": "Doddaballapura",
+          "nameKn": "ದೊಡ್ಡಬಳ್ಳಾಪುರ",
+          "hoblis": [
+            {
+              "id": "tubagere",
+              "nameEn": "Tubagere",
+              "nameKn": "ತೂಬಗೆರೆ",
+              "villages": [
+                { "id": "v206", "nameEn": "Hadripura", "nameKn": "ಹಾದ್ರಿಪುರ" },
+                { "id": "v207", "nameEn": "Melekote", "nameKn": "ಮೇಕೋಟೆ" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mysuru",
+      "nameEn": "Mysuru (Mysore)",
+      "nameKn": "ಮೈಸೂರು",
+      "taluks": [
+        {
+          "id": "mysuru_taluk",
+          "nameEn": "Mysuru",
+          "nameKn": "ಮೈಸೂರು",
+          "hoblis": [
+            {
+              "id": "varuna",
+              "nameEn": "Varuna",
+              "nameKn": "ವರುಣಾ",
+              "villages": [
+                { "id": "v301", "nameEn": "Varuna Village", "nameKn": "ವರುಣಾ" },
+                { "id": "v302", "nameEn": "Dandikere", "nameKn": "ದಂಡಿಕೆರೆ" }
+              ]
+            },
+            {
+              "id": "jayapura",
+              "nameEn": "Jayapura",
+              "nameKn": "ಜಯಪುರ",
+              "villages": [
+                { "id": "v303", "nameEn": "Mullur", "nameKn": "ಮುಳ್ಳೂರು" },
+                { "id": "v304", "nameEn": "Harohalli", "nameKn": "ಹಾರೋಹಳ್ಳಿ" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nanjangud",
+          "nameEn": "Nanjangud",
+          "nameKn": "ನಂಜನಗೂಡು",
+          "hoblis": [
+            {
+              "id": "biligere",
+              "nameEn": "Biligere",
+              "nameKn": "ಬಿಳಿಗರೆ",
+              "villages": [
+                { "id": "v305", "nameEn": "Hullahalli", "nameKn": "ಹುಲ್ಲಹಳ್ಳಿ" },
+                { "id": "v306", "nameEn": "Deveerammanahalli", "nameKn": "ದೇವಿರಮ್ಮನಹಳ್ಳಿ" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dharwad",
+      "nameEn": "Dharwad",
+      "nameKn": "ಧಾರವಾಡ",
+      "taluks": [
+        {
+          "id": "hubballi_urban",
+          "nameEn": "Hubballi Urban",
+          "nameKn": "ಹುಬ್ಬಳ್ಳಿ ನಗರ",
+          "hoblis": [
+            {
+              "id": "hubballi_kasaba",
+              "nameEn": "Kasaba Hubballi",
+              "nameKn": "ಕಸಬಾ ಹುಬ್ಬಳ್ಳಿ",
+              "villages": [
+                { "id": "v401", "nameEn": "Unkal", "nameKn": "ಉಣಕಲ್" },
+                { "id": "v402", "nameEn": "Navanagar", "nameKn": "ನವನಗರ" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "kundgol",
+          "nameEn": "Kundgol",
+          "nameKn": "ಕುಂದಗೋಳ",
+          "hoblis": [
+            {
+              "id": "kammar",
+              "nameEn": "Kammar",
+              "nameKn": "ಕಮ್ಮಾರ",
+              "villages": [
+                { "id": "v403", "nameEn": "Yaliwal", "nameKn": "ಯಲಿವಾಳ" },
+                { "id": "v404", "nameEn": "Rottigawad", "nameKn": "ರೊಟ್ಟಿಗವಾಡ" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "belagavi",
+      "nameEn": "Belagavi (Belgaum)",
+      "nameKn": "ಬೆಳಗಾವಿ",
+      "taluks": [
+        {
+          "id": "bailhongal",
+          "nameEn": "Bailhongal",
+          "nameKn": "ಬೈಲಹೊಂಗಲ",
+          "hoblis": [
+            {
+              "id": "nesargi",
+              "nameEn": "Nesargi",
+              "nameKn": "ನೇಸರಗಿ",
+              "villages": [
+                { "id": "v501", "nameEn": "Nesargi Village", "nameKn": "ನೇಸರಗಿ" },
+                { "id": "v502", "nameEn": "Sampgaon", "nameKn": "ಸಂಪಗಾಂವ" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

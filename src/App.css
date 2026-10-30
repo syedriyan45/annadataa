@@ -1,0 +1,106 @@
+/* App specific layout styles */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-bottom: 95px; /* Space for floating bottom nav */
+}
+
+.main-content {
+  flex: 1;
+  padding: 1.5rem 2rem;
+  max-width: 1600px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1rem 0.8rem;
+  }
+}
+
+/* Floating Bottom Navigation Styling */
+.bottom-nav-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0.6rem 1rem;
+  z-index: 1000;
+  background: linear-gradient(to top, rgba(240, 245, 241, 0.98) 60%, rgba(240, 245, 241, 0));
+  pointer-events: none;
+}
+
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: 680px;
+  background: rgba(255, 255, 255, 0.98) !important;
+  border: 3px solid var(--emerald-primary) !important;
+  border-radius: 30px !important;
+  padding: 0.35rem 0.8rem !important;
+  box-shadow: 0 10px 30px rgba(21, 128, 61, 0.18) !important;
+  pointer-events: auto;
+  backdrop-filter: blur(12px);
+  overflow-x: auto;
+}
+
+.bottom-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 0.35rem 0.6rem;
+  border-radius: 14px;
+  transition: all var(--transition-fast);
+  font-weight: 700;
+  flex: 1;
+  min-width: 50px;
+}
+
+.bottom-nav-item:hover {
+  background: var(--emerald-light);
+  color: var(--emerald-dark);
+}
+
+.bottom-nav-item.active {
+  background: var(--emerald-primary);
+  color: #FFFFFF !important;
+}
+
+.bottom-nav-item .nav-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.bottom-nav-item .nav-label {
+  font-size: 0.72rem;
+  font-family: 'Outfit', sans-serif;
+  white-space: nowrap;
+}
+
+@media (max-width: 500px) {
+  .bottom-nav {
+    padding: 0.25rem 0.4rem !important;
+    border-radius: 20px !important;
+  }
+  .bottom-nav-item {
+    padding: 0.3rem 0.35rem;
+    min-width: 42px;
+  }
+  .bottom-nav-item .nav-icon {
+    font-size: 1.15rem;
+  }
+  .bottom-nav-item .nav-label {
+    font-size: 0.65rem;
+  }
+}

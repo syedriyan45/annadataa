@@ -1,0 +1,72 @@
+.alert-banner-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 0.85rem;
+  border-radius: 22px;
+  background: #FEF2F2 !important;
+  border: 2px solid #FCA5A5 !important;
+  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.05);
+  overflow: hidden;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.alert-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #DC2626 !important;
+  padding: 0.55rem 1rem;
+  border-radius: 40px;
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: #FFFFFF !important;
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+.alert-badge.is-neutral { background: #475569 !important; }
+.alert-badge.has-error { background: #9F1239 !important; }
+.pulse-dot { font-size: 0.8rem; animation: pulseRed 2s infinite; }
+.pulse-dot.no-pulse { animation: none; }
+@keyframes pulseRed { 0%, 100% { opacity: 1; } 50% { opacity: 0.45; } }
+
+.live-alerts-content { flex: 1; min-width: 0; }
+.live-alerts-heading { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.35rem 1rem; margin: 0.15rem 0 0.7rem; }
+.live-alerts-location { color: #7F1D1D; font-size: 0.9rem; font-weight: 800; }
+.live-alerts-source { color: #7F1D1D; font-size: 0.72rem; opacity: 0.8; }
+.live-alerts-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 270px), 1fr)); gap: 0.65rem; }
+.live-alert-card { min-width: 0; padding: 0.8rem 0.9rem; border-radius: 13px; background: #FFFFFF; border: 1px solid #FCA5A5; color: #7F1D1D; }
+.live-alert-card.priority-critical { border-left: 5px solid #B91C1C; }
+.live-alert-card.priority-high { border-left: 5px solid #D97706; }
+.live-alert-card.priority-info { border-left: 5px solid #2563EB; }
+.live-alert-card-topline { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.3rem 0.6rem; margin-bottom: 0.45rem; }
+.priority-label { border-radius: 999px; padding: 0.18rem 0.5rem; font-size: 0.68rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.03em; }
+.priority-label-critical { background: #FEE2E2; color: #991B1B; }
+.priority-label-high { background: #FEF3C7; color: #92400E; }
+.priority-label-info { background: #DBEAFE; color: #1D4ED8; }
+.live-alert-period { color: #78350F; font-size: 0.73rem; font-weight: 700; }
+.live-alert-title { display: block; color: #7F1D1D; font-size: 0.98rem; margin-bottom: 0.25rem; }
+.live-alert-card p { margin: 0 0 0.45rem; color: #4B5563; font-size: 0.86rem; line-height: 1.45; font-weight: 500; }
+.live-alert-card small { color: #6B7280; font-size: 0.72rem; }
+.live-alerts-state { display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; padding: 0.8rem 0.9rem; border-radius: 12px; color: #7F1D1D; background: rgba(255,255,255,0.78); font-size: 0.9rem; }
+.empty-alert-state { flex-direction: column; align-items: flex-start; gap: 0.2rem; border: 1px solid #FECACA; }
+.empty-alert-state strong { color: #166534; font-size: 1rem; }
+.empty-alert-state span { color: #374151; }
+.empty-alert-state small { margin-top: 0.2rem; color: #6B7280; }
+.error-alert-state { border: 1px solid #FDA4AF; color: #881337; }
+.error-alert-state strong { width: 100%; }
+.alert-retry-button { border: 0; border-radius: 8px; padding: 0.4rem 0.75rem; color: white; background: #B91C1C; font-weight: 700; cursor: pointer; }
+.alert-retry-button:hover { background: #991B1B; }
+.alert-loading-spinner { width: 16px; height: 16px; border: 2px solid #FECACA; border-top-color: #B91C1C; border-radius: 50%; animation: alertSpin 0.8s linear infinite; flex: 0 0 auto; }
+@keyframes alertSpin { to { transform: rotate(360deg); } }
+.live-alerts-updated { margin-top: 0.55rem; text-align: right; color: #7F1D1D; font-size: 0.7rem; opacity: 0.85; }
+
+@media (max-width: 640px) {
+  .alert-banner-container { flex-direction: column; gap: 0.75rem; padding: 0.75rem; border-radius: 18px; }
+  .alert-badge { padding: 0.45rem 0.85rem; font-size: 0.85rem; }
+  .live-alerts-content { width: 100%; }
+  .live-alerts-heading { align-items: flex-start; flex-direction: column; }
+  .live-alerts-list { grid-template-columns: 1fr; }
+  .live-alerts-updated { text-align: left; line-height: 1.4; }
+}

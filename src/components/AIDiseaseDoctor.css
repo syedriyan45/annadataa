@@ -1,0 +1,551 @@
+.ai-doctor-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1rem 0 3rem;
+  width: 100%;
+}
+
+.doctor-header-card {
+  width: 100%;
+  max-width: 680px;
+  background: #FFFFFF !important;
+  border: 3px solid var(--emerald-primary) !important;
+  border-radius: 20px !important;
+  padding: 1.6rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(21, 128, 61, 0.1) !important;
+}
+
+.doctor-header-card h2 {
+  font-size: 1.6rem;
+  color: var(--emerald-dark);
+  margin-bottom: 0.3rem;
+}
+
+.doctor-header-card .subtitle {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.4;
+  margin-bottom: 1.2rem;
+}
+
+.crop-select-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.crop-select-label {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--emerald-dark);
+}
+
+.crop-select-dropdown {
+  background: #FFFFFF;
+  border: 2px solid #CBD5E1;
+  color: var(--white);
+  padding: 0.6rem 1.1rem;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  outline: none;
+  cursor: pointer;
+}
+
+.camera-viewport {
+  width: 100%;
+  max-width: 680px;
+  min-height: 350px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px !important;
+  background: #F8FAFC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--emerald-primary) !important;
+  box-shadow: 0 10px 25px rgba(21, 128, 61, 0.1) !important;
+}
+
+.camera-placeholder {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: center;
+  padding: 2.5rem 1.5rem;
+}
+
+.placeholder-icon {
+  font-size: 3.5rem;
+}
+
+.action-buttons-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.start-btn {
+  padding: 0.85rem 1.6rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border: none;
+}
+
+.camera-action-btn {
+  background: linear-gradient(90deg, var(--emerald-primary), var(--emerald-dark));
+  color: #FFFFFF;
+  box-shadow: 0 4px 15px rgba(21, 128, 61, 0.25);
+}
+
+.camera-action-btn:hover {
+  transform: translateY(-2px);
+}
+
+.upload-action-btn {
+  background: #EFF6FF;
+  color: #1D4ED8;
+  border: 2px solid #3B82F6 !important;
+}
+
+.upload-action-btn:hover {
+  background: #DBEAFE;
+  transform: translateY(-2px);
+}
+
+.upload-tip {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  max-width: 480px;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.video-wrapper, .captured-image-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0F172A;
+}
+
+.video-wrapper video, .scanned-leaf-preview {
+  width: 100%;
+  max-height: 440px;
+  object-fit: contain;
+}
+
+.scanner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(21, 128, 61, 0.15);
+  pointer-events: none;
+  z-index: 5;
+}
+
+.scan-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: #10B981;
+  box-shadow: 0 0 25px #10B981;
+  animation: scanMove 2.2s infinite ease-in-out;
+}
+
+@keyframes scanMove {
+  0% { top: 0; }
+  50% { top: 100%; }
+  100% { top: 0; }
+}
+
+.scanning-indicator-label {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(15, 23, 42, 0.9);
+  border: 2px solid #10B981;
+  color: #FFFFFF;
+  padding: 0.6rem 1.4rem;
+  border-radius: 50px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  z-index: 10;
+  white-space: nowrap;
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.capture-btn {
+  background: var(--blue-accent);
+  color: white;
+  border: none;
+  padding: 0.85rem 1.8rem;
+  border-radius: 50px;
+  font-weight: 800;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(29, 78, 216, 0.3);
+}
+
+.stop-btn, .retry-btn {
+  background: #FEE2E2;
+  color: #DC2626;
+  border: 2px solid #FCA5A5;
+  padding: 0.85rem 1.6rem;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.upload-another-btn {
+  background: #EFF6FF;
+  color: #1D4ED8;
+  border: 2px solid #93C5FD;
+  padding: 0.85rem 1.6rem;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.diagnostic-error-banner {
+  background: #FEF2F2;
+  border: 2px solid #F87171;
+  color: #991B1B;
+  padding: 1rem 1.5rem;
+  border-radius: 14px;
+  font-weight: 600;
+  max-width: 680px;
+  width: 100%;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Diagnosis Result Card Variations
+───────────────────────────────────────────────────────────── */
+.diagnosis-result {
+  width: 100%;
+  max-width: 680px;
+  padding: 2rem;
+  border-radius: 24px !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08) !important;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.status-badge-row {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.confidence-pill {
+  background: #F1F5F9;
+  border: 1px solid #CBD5E1;
+  color: var(--white);
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.source-pill {
+  margin-left: auto;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-weight: 700;
+}
+
+/* Result Box: Invalid Image */
+.result-box-invalid_image {
+  background: #FFF5F5 !important;
+  border: 3px solid #EF4444 !important;
+}
+
+.rejection-pill {
+  background: #FEE2E2;
+  color: #DC2626;
+  border: 1px solid #FCA5A5;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.rejection-title {
+  font-size: 1.45rem;
+  color: #DC2626;
+  margin: 0 0 0.5rem;
+}
+
+.rejection-desc {
+  font-size: 1rem;
+  color: #7F1D1D;
+  line-height: 1.5;
+  margin: 0 0 1rem;
+}
+
+.rejection-guidance-box {
+  background: #FFFFFF;
+  border: 1px solid #FCA5A5;
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  font-size: 0.9rem;
+  color: #991B1B;
+}
+
+.rejection-guidance-box ul {
+  margin: 0.5rem 0 0 1.2rem;
+  line-height: 1.5;
+}
+
+/* Result Box: Unclear Image */
+.result-box-unclear_image {
+  background: #FFFBEB !important;
+  border: 3px solid #F59E0B !important;
+}
+
+.unclear-pill {
+  background: #FEF3C7;
+  color: #D97706;
+  border: 1px solid #FDE68A;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.unclear-title {
+  font-size: 1.45rem;
+  color: #B45309;
+  margin: 0 0 0.5rem;
+}
+
+.unclear-desc {
+  font-size: 1rem;
+  color: #92400E;
+  line-height: 1.5;
+  margin: 0 0 1rem;
+}
+
+.clarity-tips-box {
+  background: #FFFFFF;
+  border: 1px solid #FDE68A;
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  font-size: 0.9rem;
+  color: #B45309;
+}
+
+.clarity-tips-box ul {
+  margin: 0.5rem 0 0 1.2rem;
+  line-height: 1.5;
+}
+
+/* Result Box: Healthy Crop */
+.result-box-healthy {
+  background: #F0FDF4 !important;
+  border: 3px solid #10B981 !important;
+}
+
+.healthy-pill {
+  background: #DCFCE7;
+  color: #15803D;
+  border: 1px solid #86EFAC;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.healthy-title {
+  font-size: 1.45rem;
+  color: #15803D;
+  margin: 0 0 0.4rem;
+}
+
+.healthy-desc {
+  font-size: 0.95rem;
+  color: #166534;
+  line-height: 1.5;
+  margin: 0 0 1rem;
+}
+
+.healthy-advisory-box {
+  background: #FFFFFF;
+  border: 1px solid #BBF7D0;
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  font-size: 0.92rem;
+  color: #14532D;
+}
+
+/* Result Box: Inconclusive */
+.result-box-inconclusive {
+  background: #EFF6FF !important;
+  border: 3px solid #3B82F6 !important;
+}
+
+.inconclusive-pill {
+  background: #DBEAFE;
+  color: #1D4ED8;
+  border: 1px solid #93C5FD;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.inconclusive-title {
+  font-size: 1.45rem;
+  color: #1D4ED8;
+  margin: 0 0 0.4rem;
+}
+
+.inconclusive-desc {
+  font-size: 0.95rem;
+  color: #1E40AF;
+  line-height: 1.5;
+  margin: 0 0 1rem;
+}
+
+.kvk-referral-box {
+  background: #FFFFFF;
+  border: 1px solid #BFDBFE;
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  font-size: 0.92rem;
+  color: #1E3A8A;
+}
+
+/* Result Box: Diseased */
+.result-box-diseased {
+  background: #FFFFFF !important;
+  border: 3px solid var(--emerald-primary) !important;
+}
+
+.disease-pill {
+  background: #FEF2F2;
+  color: #DC2626;
+  border: 1px solid #FCA5A5;
+  padding: 0.35rem 0.85rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+.severity-tag {
+  padding: 0.3rem 0.8rem;
+  border-radius: 12px;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.severity-high {
+  background: #DC2626;
+  color: #FFFFFF;
+}
+
+.severity-medium {
+  background: #D97706;
+  color: #FFFFFF;
+}
+
+.severity-low {
+  background: #10B981;
+  color: #FFFFFF;
+}
+
+.disease-title {
+  font-size: 1.5rem;
+  color: var(--emerald-dark);
+  margin: 0;
+}
+
+.symptoms-evidence-box {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 0.9rem 1.1rem;
+  font-size: 0.92rem;
+  color: var(--white);
+}
+
+.treatment-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.treatment-item {
+  background: #F0FDF4;
+  border: 1px solid #BBF7D0;
+  padding: 0.9rem 1.1rem;
+  border-radius: 12px;
+}
+
+.treatment-lbl {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--emerald-dark);
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+}
+
+.treatment-val {
+  font-size: 0.92rem;
+  color: #14532D;
+  margin: 0;
+}
+
+.expert-disclaimer-box {
+  background: #FFFBEB;
+  border-left: 5px solid #F59E0B;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: #92400E;
+}
+
+.preliminary-note {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .treatment-grid {
+    grid-template-columns: 1fr;
+  }
+}

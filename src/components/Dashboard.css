@@ -1,0 +1,100 @@
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem 0;
+  animation: fadeIn var(--transition-normal);
+}
+
+.dashboard-header {
+  margin-bottom: 1rem;
+}
+
+.dashboard-header h2 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--emerald-dark);
+  margin-bottom: 0.5rem;
+}
+
+.dashboard-header p {
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.8rem;
+  width: 100%;
+  align-items: stretch;
+}
+
+@media (max-width: 1024px) {
+  .dashboard-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+  .dashboard-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 1rem;
+  }
+}
+
+.location-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  border-radius: 20px;
+  background: #FFFFFF;
+  border: 3px solid var(--emerald-primary);
+  min-width: 320px;
+  box-shadow: 0 4px 10px rgba(21, 128, 61, 0.05);
+}
+
+.location-selectors {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.location-selectors select {
+  flex: 1;
+  background: #FFFFFF;
+  border: 2px solid var(--emerald-primary);
+  color: var(--emerald-dark);
+  font-weight: 800;
+  font-size: 1rem;
+  padding: 0.6rem;
+  border-radius: 12px;
+  outline: none;
+  cursor: pointer;
+  transition: border-color var(--transition-fast);
+}
+
+.location-selectors select:hover {
+  border-color: var(--emerald-dark);
+}
+
+.location-selectors select option {
+  background: #FFFFFF;
+  color: #0F172A;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,718 @@
+.meghdoot-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(10px);
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  font-family: 'Outfit', 'Inter', sans-serif;
+  color: #0F172A;
+  box-sizing: border-box;
+}
+
+.meghdoot-modal-content {
+  width: 100%;
+  max-width: 1000px;
+  height: 90vh;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 24px;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  animation: modalFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Tricolor Stripe */
+.gov-top-banner {
+  background: #F8FAFC;
+  border-bottom: 1px solid #E2E8F0;
+  position: relative;
+}
+
+.tricolor-stripe {
+  height: 6px;
+  display: flex;
+  width: 100%;
+}
+
+.tricolor-stripe .saffron {
+  background: #FF9933;
+  flex: 1;
+}
+
+.tricolor-stripe .white {
+  background: #FFFFFF;
+  flex: 1;
+}
+
+.tricolor-stripe .green {
+  background: #138808;
+  flex: 1;
+}
+
+.banner-logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+  gap: 1rem;
+}
+
+.gov-logo-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-subtext {
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: #64748B;
+  margin-top: 0.2rem;
+  letter-spacing: 0.05em;
+}
+
+.gov-app-branding {
+  text-align: center;
+}
+
+.gov-app-branding h1 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #0F172A;
+  letter-spacing: -0.02em;
+}
+
+.gov-app-branding p {
+  margin: 0.1rem 0 0 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+/* Controls Bar */
+.meghdoot-controls-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: #FFFFFF;
+  border-bottom: 1px solid #F1F5F9;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.location-info h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1E293B;
+}
+
+.location-info .sub {
+  margin: 0.2rem 0 0 0;
+  font-size: 0.85rem;
+  color: #64748B;
+  font-weight: 500;
+}
+
+.action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.control-btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid #E2E8F0;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.speech-btn {
+  background: #10B981;
+  color: #FFFFFF;
+  border-color: #059669;
+}
+
+.speech-btn:hover {
+  background: #059669;
+  transform: translateY(-1px);
+}
+
+.speech-btn.speaking {
+  background: #EF4444;
+  border-color: #DC2626;
+  animation: pulseSpeech 1.5s infinite;
+}
+
+@keyframes pulseSpeech {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
+.mode-btn {
+  background: #F1F5F9;
+  color: #334155;
+}
+
+.mode-btn:hover {
+  background: #E2E8F0;
+}
+
+.mode-btn.active {
+  background: #3B82F6;
+  color: #FFFFFF;
+  border-color: #2563EB;
+}
+
+.close-btn-round {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #E2E8F0;
+  background: #F8FAFC;
+  font-size: 1.5rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #64748B;
+  transition: all 0.2s ease;
+}
+
+.close-btn-round:hover {
+  background: #EF4444;
+  color: #FFFFFF;
+  border-color: #EF4444;
+}
+
+/* Alert Ribbons */
+.meghdoot-alert-ribbons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 0.8rem 1.5rem 0.2rem 1.5rem;
+  background: #FFFFFF;
+}
+
+.alert-ribbon {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-left: 5px solid;
+}
+
+.alert-ribbon.rain {
+  background: #FEF2F2;
+  color: #991B1B;
+  border-left-color: #EF4444;
+}
+
+.alert-ribbon.wind {
+  background: #FFFBEB;
+  color: #92400E;
+  border-left-color: #F59E0B;
+}
+
+.alert-ribbon.heat {
+  background: #FFF7ED;
+  color: #9A3412;
+  border-left-color: #F97316;
+}
+
+.alert-ribbon.cold {
+  background: #EFF6FF;
+  color: #1E40AF;
+  border-left-color: #3B82F6;
+}
+
+.alert-badge {
+  background: currentColor;
+  color: #FFFFFF;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
+/* Body Scroll Container */
+.meghdoot-body-scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.5rem;
+  background: #F8FAFC;
+}
+
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 0;
+  color: #64748B;
+}
+
+.spinner {
+  width: 45px;
+  height: 45px;
+  border: 4px solid rgba(16, 185, 129, 0.15);
+  border-top-color: #10B981;
+  border-radius: 50%;
+  animation: spin 1s infinite linear;
+  margin-bottom: 1.2rem;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.offline-error-banner {
+  background: #FEF3C7;
+  border: 1px solid #FDE68A;
+  color: #92400E;
+  padding: 0.8rem 1.2rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* 5-Day Forecast Grid styling */
+.forecast-section h3, .agro-advisory-section h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1E293B;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.forecast-grid-scroll {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+  border-radius: 16px;
+}
+
+.forecast-grid-meghdoot {
+  display: flex;
+  gap: 1rem;
+  min-width: 750px;
+  padding-bottom: 0.5rem;
+}
+
+.forecast-col-card {
+  flex: 1;
+  background: #FFFFFF;
+  border-radius: 16px;
+  border: 1px solid #E2E8F0;
+  padding: 1.2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.forecast-col-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+  border-color: #CBD5E1;
+}
+
+.forecast-col-card.today-active {
+  border: 2px solid #10B981;
+  background: #F0FDF4;
+}
+
+.today-badge {
+  position: absolute;
+  top: -8px;
+  background: #10B981;
+  color: #FFFFFF;
+  font-size: 0.6rem;
+  font-weight: 800;
+  padding: 0.15rem 0.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px -1px rgba(16, 185, 129, 0.2);
+}
+
+.card-date-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.card-date-label .day-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #334155;
+  text-transform: uppercase;
+}
+
+.card-date-label .date-num {
+  font-size: 0.8rem;
+  color: #64748B;
+  font-weight: 600;
+}
+
+.weather-visual-icon {
+  font-size: 2.2rem;
+  margin-bottom: 0.4rem;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.05));
+  animation: floatWeather 4s infinite ease-in-out;
+}
+
+@keyframes floatWeather {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.weather-desc-text {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-align: center;
+  color: #1E293B;
+  margin-bottom: 1rem;
+  min-height: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.forecast-metric-lines {
+  width: 100%;
+  border-top: 1px dashed #E2E8F0;
+  padding-top: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.metric-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.metric-row .lbl {
+  color: #64748B;
+}
+
+.metric-row .val {
+  color: #1E293B;
+  font-weight: 700;
+}
+
+.metric-row .val.rain-highlight {
+  color: #2563EB;
+}
+
+/* Major Crops strip */
+.major-crops-strip {
+  background: #F1F5F9;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 0.8rem 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.major-crops-strip .title {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #475569;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.crop-badges-row {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.crop-badge {
+  background: #FFFFFF;
+  color: #059669;
+  border: 1px solid #A7F3D0;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+}
+
+/* Agro advisories panels */
+.advisory-grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.2rem;
+}
+
+.advisory-panel-card {
+  background: #FFFFFF;
+  border-radius: 20px;
+  border: 1px solid #E2E8F0;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.advisory-panel-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+}
+
+.advisory-panel-card.sowing::before { background: #10B981; }
+.advisory-panel-card.irrigation::before { background: #3B82F6; }
+.advisory-panel-card.pesticides::before { background: #EF4444; }
+.advisory-panel-card.harvesting::before { background: #F59E0B; }
+.advisory-panel-card.livestock::before { background: #8B5CF6; }
+
+.advisory-panel-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 20px -8px rgba(0, 0, 0, 0.08);
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.panel-header .icon {
+  font-size: 1.5rem;
+}
+
+.panel-header h4 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1E293B;
+}
+
+.advisory-panel-card .text-content {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #475569;
+  font-weight: 500;
+}
+
+/* =========================================
+   SIMPLE MODE (High Contrast & Large Font)
+   ========================================= */
+.simple-mode-active .meghdoot-modal-content {
+  background: #FFFFFF;
+  border: 3px solid #000000;
+}
+
+.simple-mode-active .gov-app-branding h1 {
+  font-size: 1.8rem;
+}
+
+.simple-mode-active .location-info h2 {
+  font-size: 1.8rem;
+  color: #000000;
+  font-weight: 800;
+}
+
+.simple-mode-active .location-info .sub {
+  font-size: 1.1rem;
+  color: #000000;
+  font-weight: 700;
+}
+
+.simple-mode-active .control-btn {
+  padding: 0.8rem 1.6rem;
+  font-size: 1.1rem;
+  border: 2px solid #000000;
+  border-radius: 16px;
+}
+
+.simple-mode-active .speech-btn {
+  background: #15803D;
+  color: #FFFFFF;
+}
+
+.simple-mode-active .mode-btn {
+  background: #000000;
+  color: #FFFFFF;
+}
+
+.simple-mode-active .alert-ribbon {
+  font-size: 1.1rem;
+  border: 2px solid #000000;
+  border-left-width: 8px;
+}
+
+.simple-mode-active .forecast-section h3, 
+.simple-mode-active .agro-advisory-section h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #000000;
+  text-decoration: underline;
+}
+
+.simple-mode-active .crop-badge {
+  font-size: 1.05rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid #047857;
+  color: #047857;
+}
+
+.simple-mode-active .forecast-col-card {
+  border: 2px solid #000000;
+}
+
+.simple-mode-active .forecast-col-card.today-active {
+  border: 4px solid #15803D;
+  background: #F0FDF4;
+}
+
+.simple-mode-active .card-date-label .day-name {
+  font-size: 1.2rem;
+  color: #000000;
+}
+
+.simple-mode-active .card-date-label .date-num {
+  font-size: 1rem;
+  color: #000000;
+}
+
+.simple-mode-active .weather-desc-text {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #000000;
+}
+
+.simple-mode-active .metric-row {
+  font-size: 0.95rem;
+  border-bottom: 1px dotted #CBD5E1;
+  padding: 0.2rem 0;
+}
+
+.simple-mode-active .metric-row .lbl,
+.simple-mode-active .metric-row .val {
+  color: #000000;
+  font-weight: 800;
+}
+
+.simple-mode-active .advisory-panel-card {
+  border: 2px solid #000000;
+  background: #FFFBEB; /* High visibility background */
+}
+
+.simple-mode-active .panel-header h4 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #000000;
+}
+
+.simple-mode-active .advisory-panel-card .text-content {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #000000;
+  font-weight: 700;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .meghdoot-modal-content {
+    height: 100vh;
+    border-radius: 0;
+    max-width: 100%;
+  }
+
+  .meghdoot-modal-overlay {
+    padding: 0;
+  }
+
+  .banner-logos {
+    padding: 0.5rem 1rem;
+  }
+
+  .gov-app-branding h1 {
+    font-size: 1.1rem;
+  }
+
+  .meghdoot-controls-bar {
+    padding: 0.8rem 1rem;
+  }
+
+  .location-info h2 {
+    font-size: 1.1rem;
+  }
+
+  .action-buttons {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .control-btn {
+    flex: 1;
+    justify-content: center;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .forecast-grid-meghdoot {
+    min-width: 600px;
+  }
+
+  .advisory-grid-cards {
+    grid-template-columns: 1fr;
+  }
+}

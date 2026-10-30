@@ -1,0 +1,225 @@
+.advisory-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(240, 245, 241, 0.92); /* Bright transparent overlay */
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1100;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.advisory-modal-content {
+  width: 95%;
+  max-width: 1000px;
+  background: #FFFFFF !important;
+  border: 3px solid var(--emerald-primary) !important;
+  border-radius: 24px;
+  padding: 2rem;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(21, 128, 61, 0.15) !important;
+}
+
+.advisory-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--navy-light);
+  padding-bottom: 1rem;
+}
+
+.advisory-modal-header h2 {
+  color: var(--emerald-dark) !important;
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.advisory-modal-header p {
+  color: var(--text-muted);
+  margin: 0.2rem 0 0 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.filter-bar {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.search-input {
+  flex: 1;
+  background: #FFFFFF;
+  border: 2px solid var(--emerald-primary);
+  padding: 0.8rem 1.2rem;
+  border-radius: 12px;
+  color: #0F172A;
+  font-size: 1.1rem;
+  font-weight: 700;
+  outline: none;
+}
+
+.season-select {
+  background: #FFFFFF;
+  border: 2px solid var(--emerald-primary);
+  padding: 0.8rem 1.2rem;
+  border-radius: 12px;
+  color: #0F172A;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.crop-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.2rem;
+}
+
+.crop-card-mini {
+  padding: 1.2rem;
+  background: #FFFFFF;
+  border: 2px solid #CBD5E1;
+  border-radius: 16px;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.crop-card-mini:hover {
+  transform: translateY(-3px);
+  border-color: var(--emerald-primary);
+  box-shadow: 0 4px 12px rgba(21, 128, 61, 0.08);
+}
+
+.crop-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.crop-info h4 {
+  margin: 0;
+  color: #0F172A !important;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.season-badge {
+  font-size: 0.75rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.season-badge.kharif { background: #DCFCE7; color: #15803D; }
+.season-badge.rabi { background: #DBEAFE; color: #1D4ED8; }
+.season-badge.zaid { background: #FEF3C7; color: #D97706; }
+
+.crop-details {
+  font-size: 1rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.treatment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.treatment-card {
+  padding: 1.5rem;
+  background: #FFFFFF;
+  border: 3px solid var(--emerald-primary);
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.treatment-card h4 {
+  color: var(--emerald-dark) !important;
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+.pest-alert {
+  display: flex;
+  gap: 0.5rem;
+  background: #FEF2F2;
+  border: 2px solid #FCA5A5;
+  color: #991B1B;
+  padding: 0.8rem;
+  border-radius: 10px;
+  margin: 1rem 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.remedy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.remedy-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  font-weight: 700;
+  border-bottom: 1px solid #F1F5F9;
+  padding-bottom: 0.4rem;
+}
+
+.remedy-item label { color: var(--text-muted); }
+.remedy-item .dosage { 
+  color: var(--emerald-primary);
+  font-weight: 800;
+}
+
+.close-btn {
+  background: #F1F5F9;
+  border: 2px solid #CBD5E1;
+  color: #475569;
+  padding: 0.5rem 0.8rem;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.close-btn:hover {
+  background: #E2E8F0;
+  color: #0F172A;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.crop-card-mini.main-crop-card, .treatment-card.main-crop-card {
+  border-color: var(--emerald-primary) !important;
+  background-color: rgba(220, 252, 231, 0.18) !important;
+  box-shadow: 0 4px 15px rgba(21, 128, 61, 0.08) !important;
+}
+
+.main-crop-badge-advisory {
+  background: var(--emerald-primary) !important;
+  color: #FFFFFF !important;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  display: inline-block;
+  box-shadow: 0 2px 4px rgba(21, 128, 61, 0.1);
+  white-space: nowrap;
+}
